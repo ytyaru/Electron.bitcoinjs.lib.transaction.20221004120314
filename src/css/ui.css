@@ -1,0 +1,47 @@
+@charset "utf-8";
+label, legend, form, fieldset, button, input, textarea, select, option, output {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    /*font-size: calc(100vw / (var(--line-of-chars)));*/
+    /*line-height: 1.0em;*/
+    /*line-height: 1.5em;
+    letter-spacing: 0.05em;*/
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    border-color: var(--fg-color);
+    /*max-width: 90%;*/
+}
+pre > code {
+    /*font-size: calc(100vw / calc(var(--line-of-chars) * 2));*/
+    /*font-size: var(--font-size-code);*/
+    font-size: calc(var(--font-size) / 2);
+}
+textarea {
+    width: 100%;
+    /*line-height: 1.5em;*/
+}
+input[type="checkbox"] + .label {
+    color: var(--thin-fg-color);
+}
+input[type="checkbox"]:checked + .label {
+    /* チェックされたチェックボックス直後の.labelのスタイル */
+    color: var(--fg-color);
+}
+.warning { background-color:#EEEE00; font-weight:bold; }
+.error { background-color:#FF8866; font-weight:bold; }
+#preview { opacity:0.5; }
+#line-of-chars {
+    width:60%;
+}
+#line-of-chars-slider {
+    line-height:16px;
+    padding:0;
+    /*margin:0;*/
+}
+#line-of-chars-slider-values {
+    display: flex;
+    justify-content: space-between;
+    font-size:16px;
+    width:60%;
+}
